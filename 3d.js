@@ -155,7 +155,7 @@ ShaderUniform = _.prototype ({
 	},
 	bindTexture: function (texture, index) {
 		this.gl.uniform1i (this.location, index)
-		this.gl.activeTexture (this.gl.TEXTURE0)
+		this.gl.activeTexture (this.gl.TEXTURE0 + index)
 		this.gl.bindTexture (this.gl.TEXTURE_2D, texture.texture)
 	}
 })
